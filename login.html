@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <title>Login Page</title>
+    <style>
+       body {
+    font-family: 'Creepster', cursive;
+    background-color: #000000;
+    color: #ffffff;
+    background-image: url("background.jpg");
+    background-position: 0cm;
+}
+
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border: 2px solid #ff6600;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.5);
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff6600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ff6600;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 5px;
+    border: 1px solid #ff6600;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+button[type="submit"] {
+    background-color: #ff6600;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff8533;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.7);
+}
+
+.container .forgot-password {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container .create-account {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#invalid {
+    color: #ff3300;
+    font-size: small;
+}
+
+.toggle {
+    color: #ff6600;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+a, button#new {
+    color: #ff6600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover, button#new:hover {
+    color: #ff8533;
+    text-shadow: 0 0 5px rgba(255, 102, 0, 0.7);
+}
+
+button#new {
+    background-color: transparent;
+    border: 1px solid #ff6600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button#new:hover {
+    background-color: #ff6600;
+    color: #000000;
+}
+
+input[type="checkbox"] {
+    accent-color: #ff6600;
+}
+
+input[type="checkbox"] + label {
+    display: inline;
+    color: #ffffff;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Log-In</h1>
+        <div id="invalid"></div>
+        
+        <fieldset>
+            <form action="authenticate.php" id="login">
+                <label for="user"><b>Username:</b></label><br>
+                <input type="text" id="user" name="user" placeholder="Enter Username" required><br><br>
+    
+                <label for="pass"><b>Password:</b></label><br>
+                <input type="password" id="pass" name="pass" placeholder="Enter Password" required>
+                <span class="toggle" onclick="check()">Show Password</span><br><br>
+    
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember Me</label><br><br>
+    
+                <button type="submit">Login</button>
+            </form>
+        </fieldset>
+    
+        <a href="" onclick="navigate(event)" id="forgot">Forgot Password?</a><br><br>
+        
+        <button onclick="navigate(event)" id="new">Create New Account</button>
+    </div>
+
+    <script src="enter.js"></script>
+</body>
+</html>
